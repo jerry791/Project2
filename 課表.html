@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="課表.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="icon" href="select.ico" />
+    <title>課程選擇器</title>
+</head>
+<style>
+    td:hover {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <div class="title">
+        <h1>Class Selection Tool</h1>
+    </div>
+    <div class="bar">
+        <div class="color1 circle" onclick="color('#8CABD9')"></div>
+        <input type="text" value="必修" class="input1">
+        <div class="color2 circle" onclick="color('#F6A7B8')"></div>
+        <input type="text" value="博雅" class="input2">
+        <div class="color3 circle" onclick="color('#67D5B5')"></div>
+        <input type="text" value="跨院" class="input3">
+        <div class="color4 circle" onclick="color('#C89EC4')"></div>
+        <input type="text" value="體育" class="input4">
+        <div class="color5 circle" onclick="color('#FFB830')"></div>
+        <input type="text" value="排球" class="input5">
+        <div class="color6 circle" onclick="color('#ee6c4d')"></div>
+        <input type="text" value="資管" class="input6">
+    </div>
+    <div class="container">
+        <div class="body">
+            <table>
+                <tr>
+                    <td></td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                    <td>日</td>
+                </tr>
+                <tr>
+                    <td><span>7:00</span><br>A</td>
+                    <td onclick="paint(1,1)"></td>
+                    <td onclick="paint(1,2)"></td>
+                    <td onclick="paint(1,3)"></td>
+                    <td onclick="paint(1,4)"></td>
+                    <td onclick="paint(1,5)"></td>
+                    <td onclick="paint(1,6)"></td>
+                    <td onclick="paint(1,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>8:10</span><br>1</td>
+                    <td onclick="paint(2,1)"></td>
+                    <td onclick="paint(2,2)"></td>
+                    <td onclick="paint(2,3)"></td>
+                    <td onclick="paint(2,4)"></td>
+                    <td onclick="paint(2,5)"></td>
+                    <td onclick="paint(2,6)"></td>
+                    <td onclick="paint(2,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>9:10</span><br>2</td>
+                    <td onclick="paint(3,1)"></td>
+                    <td onclick="paint(3,2)"></td>
+                    <td onclick="paint(3,3)"></td>
+                    <td onclick="paint(3,4)"></td>
+                    <td onclick="paint(3,5)"></td>
+                    <td onclick="paint(3,6)"></td>
+                    <td onclick="paint(3,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>10:10</span><br>3</td>
+                    <td onclick="paint(4,1)"></td>
+                    <td onclick="paint(4,2)"></td>
+                    <td onclick="paint(4,3)"></td>
+                    <td onclick="paint(4,4)"></td>
+                    <td onclick="paint(4,5)"></td>
+                    <td onclick="paint(4,6)"></td>
+                    <td onclick="paint(4,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>11:10</span><br>4</td>
+                    <td onclick="paint(5,1)"></td>
+                    <td onclick="paint(5,2)"></td>
+                    <td onclick="paint(5,3)"></td>
+                    <td onclick="paint(5,4)"></td>
+                    <td onclick="paint(5,5)"></td>
+                    <td onclick="paint(5,6)"></td>
+                    <td onclick="paint(5,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>12:10</span><br>B</td>
+                    <td onclick="paint(6,1)"></td>
+                    <td onclick="paint(6,2)"></td>
+                    <td onclick="paint(6,3)"></td>
+                    <td onclick="paint(6,4)"></td>
+                    <td onclick="paint(6,5)"></td>
+                    <td onclick="paint(6,6)"></td>
+                    <td onclick="paint(6,7)"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                    <td>日</td>
+                </tr>
+                <tr>
+                    <td><span>13:10</span><br>5</td>
+                    <td onclick="paint(8,1)"></td>
+                    <td onclick="paint(8,2)"></td>
+                    <td onclick="paint(8,3)"></td>
+                    <td onclick="paint(8,4)"></td>
+                    <td onclick="paint(8,5)"></td>
+                    <td onclick="paint(8,6)"></td>
+                    <td onclick="paint(8,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>14:10</span><br>6</td>
+                    <td onclick="paint(9,1)"></td>
+                    <td onclick="paint(9,2)"></td>
+                    <td onclick="paint(9,3)"></td>
+                    <td onclick="paint(9,4)"></td>
+                    <td onclick="paint(9,5)"></td>
+                    <td onclick="paint(9,6)"></td>
+                    <td onclick="paint(9,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>15:10</span><br>7</td>
+                    <td onclick="paint(10,1)"></td>
+                    <td onclick="paint(10,2)"></td>
+                    <td onclick="paint(10,3)"></td>
+                    <td onclick="paint(10,4) "></td>
+                    <td onclick="paint(10,5)"></td>
+                    <td onclick="paint(10,6) "></td>
+                    <td onclick="paint(10,7)"></td>
+                </tr>
+                <tr>
+                    <td><span>16:10</span><br>8</td>
+                    <td onclick="paint(11,1) "> </td>
+                    <td onclick="paint(11,2)"> </td>
+                    <td onclick="paint(11,3) "> </td>
+                    <td onclick="paint(11,4)"> </td>
+                    <td onclick="paint(11,5) "> </td>
+                    <td onclick="paint(11,6)"> </td>
+                    <td onclick="paint(11,7) "> </td>
+                </tr>
+                <tr>
+                    <td><span>17:10</span><br>9</td>
+                    <td onclick="paint(12,1)"> </td>
+                    <td onclick="paint(12,2) "> </td>
+                    <td onclick="paint(12,3)"> </td>
+                    <td onclick="paint(12,4) "> </td>
+                    <td onclick="paint(12,5)"> </td>
+                    <td onclick="paint(12,6) "> </td>
+                    <td onclick="paint(12,7)"> </td>
+                </tr>
+                <tr>
+                    <td><span>18:20</span><br>C</td>
+                    <td onclick="paint(13,1) "> </td>
+                    <td onclick="paint(13,2)"> </td>
+                    <td onclick="paint(13,3) "> </td>
+                    <td onclick="paint(13,4)"> </td>
+                    <td onclick="paint(13,5) "> </td>
+                    <td onclick="paint(13,6)"> </td>
+                    <td onclick="paint(13,7) "> </td>
+                </tr>
+                <tr>
+                    <td><span>19:15</span><br>D</td>
+                    <td onclick="paint(14,1)"> </td>
+                    <td onclick="paint(14,2) "> </td>
+                    <td onclick="paint(14,3)"> </td>
+                    <td onclick="paint(14,4) "> </td>
+                    <td onclick="paint(14,5)"> </td>
+                    <td onclick="paint(14,6) "> </td>
+                    <td onclick="paint(14,7)"> </td>
+                </tr>
+                <tr>
+                    <td><span>20:10</span><br>E</td>
+                    <td onclick="paint(15,1) "> </td>
+                    <td onclick="paint(15,2)"> </td>
+                    <td onclick="paint(15,3) "> </td>
+                    <td onclick="paint(15,4)"> </td>
+                    <td onclick="paint(15,5) "> </td>
+                    <td onclick="paint(15,6)"> </td>
+                    <td onclick="paint(15,7) "> </td>
+                </tr>
+                <tr>
+                    <td><span>21:05</span><br>F</td>
+                    <td onclick="paint(16,1)"></td>
+                    <td onclick="paint(16,2) "></td>
+                    <td onclick="paint(16,3)"></td>
+                    <td onclick="paint(16,4) "></td>
+                    <td onclick="paint(16,5)"></td>
+                    <td onclick="paint(16,6) "></td>
+                    <td onclick="paint(16,7)"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    /*get cookie by name*/
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    inp1 = document.querySelector('.input1');
+    inp2 = document.querySelector('.input2');
+    inp3 = document.querySelector('.input3');
+    inp4 = document.querySelector('.input4');
+    inp5 = document.querySelector('.input5');
+    inp6 = document.querySelector('.input6');
+    if (!getCookie('inp1')) {
+        document.cookie = 'inp1' + '=' + inp1.value;
+    } else {
+        inp1.value = getCookie('inp1');
+    }
+    if (!getCookie('inp2')) {
+        document.cookie = 'inp2' + '=' + inp2.value;
+    } else {
+        inp2.value = getCookie('inp2');
+    }
+    if (!getCookie('inp3')) {
+        document.cookie = 'inp3' + '=' + inp3.value;
+    } else {
+        inp3.value = getCookie('inp3');
+    }
+    if (!getCookie('inp4')) {
+        document.cookie = 'inp4' + '=' + inp4.value;
+    } else {
+        inp4.value = getCookie('inp4');
+    }
+    if (!getCookie('inp5')) {
+        document.cookie = 'inp5' + '=' + inp5.value;
+    } else {
+        inp5.value = getCookie('inp5');
+    }
+    if (!getCookie('inp6')) {
+        document.cookie = 'inp6' + '=' + inp6.value;
+    } else {
+        inp6.value = getCookie('inp6');
+    }
+    inp1.addEventListener('keyup', function() {
+        inpaint('1');
+    })
+    inp2.addEventListener('keyup', function() {
+        inpaint('2');
+    })
+    inp3.addEventListener('keyup', function() {
+        inpaint('3');
+    })
+    inp4.addEventListener('keyup', function() {
+        inpaint('4');
+    })
+    inp5.addEventListener('keyup', function() {
+        inpaint('5');
+    })
+    inp6.addEventListener('keyup', function() {
+        inpaint('6');
+    })
+
+    function inpaint(x) {
+        if (x == 1) {
+            document.cookie = 'inp' + x + '=' + inp1.value;
+        } else if (x == 2) {
+            document.cookie = 'inp' + x + '=' + inp2.value;
+        } else if (x == 3) {
+            document.cookie = 'inp' + x + '=' + inp3.value;
+        } else if (x == 4) {
+            document.cookie = 'inp' + x + '=' + inp4.value;
+        } else if (x == 5) {
+            document.cookie = 'inp' + x + '=' + inp5.value;
+        } else if (x == 6) {
+            document.cookie = 'inp' + x + '=' + inp6.value;
+        }
+    }
+
+    /*add*/
+    function add(x, y) {
+        let count = 0;
+        for (let i = 1; getCookie('x' + i); i++) {
+            count++;
+        }
+        count++;
+        document.cookie = 'x' + count + '=' + x;
+        document.cookie = 'y' + count + '=' + y;
+        document.cookie = 'ini_Color' + count + "=" + getCookie('Color');
+    }
+    /*remove*/
+    function del(x, y) {
+        let count = 0;
+        for (let i = 1; getCookie('x' + i); i++) {
+            count++;
+        }
+        for (let i = 1; i <= count; i++) {
+            if (getCookie('x' + i) == x && getCookie('y' + i) == y) {
+                for (let j = i; j <= count - 1; j++) {
+                    document.cookie = 'x' + j + '=' + getCookie('x' + (j + 1));
+                    document.cookie = 'y' + j + '=' + getCookie('y' + (j + 1));
+                }
+            }
+        }
+        document.cookie = 'x' + count + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        document.cookie = 'y' + count + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        document.cookie = 'ini_Color' + count + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    }
+    /*coloring if onclick class name*/
+    function color(z) {
+        document.cookie = 'Color=' + z;
+        let css = 'td:hover{background-color:' + getCookie('Color') + '}';
+        let style = document.createElement('style');
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        for (let i = 0; i < document.querySelectorAll("td ").length; i++) {
+            document.querySelectorAll("td ")[i].appendChild(style);
+        }
+    }
+    /*ini block*/
+    for (let i = 1; getCookie('x' + i); i++) {
+        let block = document.querySelectorAll(" tr ")[getCookie('x' + i)].querySelectorAll("td ")[getCookie('y' + i)];
+        block.style.background = getCookie('ini_Color' + i);
+    }
+    color(getCookie('Color'));
+    /*painting if onclick block*/
+    function paint(x, y) {
+        /*如果按下的block是同一格且不是底色，remove到底色*/
+        var check = 0;
+        for (let i = 1; getCookie('x' + i); i++) {
+            if (x == getCookie('x' + i) && y == getCookie('y' + i)) {
+                if (getCookie('Color') == getCookie('ini_Color' + i)) {
+                    check = 1;
+                }
+                /*不同的顏色，就換成不同的顏色*/
+                else if (getCookie('Color') != getCookie('ini_Color' + i)) {
+                    let block = document.querySelectorAll("tr ")[x].querySelectorAll("td ")[y];
+                    block.style.background = getCookie('Color');
+                    document.cookie = 'ini_Color' + i + "=" + getCookie('Color');
+                    check = 2;
+                }
+            }
+        }
+        if (check == 1) {
+            /*remove*/
+            let block = document.querySelectorAll("tr ")[x].querySelectorAll("td ")[y];
+            block.style.background = '#edeefa';
+            del(x, y);
+        } else if (check == 0 && getCookie('Color') !== '#fff') {
+            let block = document.querySelectorAll("tr ")[x].querySelectorAll("td ")[y];
+            block.style.background = getCookie('Color');
+            add(x, y);
+        }
+    }
+</script>
+
+</html>

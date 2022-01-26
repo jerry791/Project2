@@ -448,7 +448,6 @@ template {
     justify-content: center;
     position: sticky;
     top: 0;
-    box-shadow: 3px 3px 5px#cccccc;
 }
 
 .bar input {
